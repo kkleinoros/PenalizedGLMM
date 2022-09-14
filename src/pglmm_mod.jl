@@ -1,5 +1,5 @@
 """
-    pglmm(nullmode, plinkfile; kwargs...)
+    pglmm_mod(nullmode, plinkfile; kwargs...)
 # Positional arguments 
 - `nullmodel`: null model obtained by fitting pglmm_null.
 - `plinkfile::AbstractString`: PLINK file name containing genetic information,
@@ -20,7 +20,7 @@
 - `criterion`: criterion for coordinate descent convergence. Can be equal to `:coef` (default) or `:obj`.
 - `earlystop::Bool = true (default)`: should full lasso path search stop earlier if deviance change is smaller than MIN_DEV_FRAC_DIFF or higher than MAX_DEV_FRAC ? 
 """
-function pglmm(
+function pglmm_mod(
     # positional arguments
     nullmodel,
     depthsfile::AbstractString, # ::Vector{Float64}
